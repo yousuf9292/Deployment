@@ -1,6 +1,7 @@
 from flask import Flask,render_template,url_for,redirect,session
+from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import FloatField,SubmitField
+from wtforms import FloatField,SubmitField,TextField
 import numpy as np
 import joblib
 from keras.models import load_model
@@ -48,13 +49,15 @@ def return_predictions(model,scaler,sample_json):
 
 
 app= Flask(__name__)
+Bootstrap(app)
 app.config['SECRET_KEY']="thisissecret"
+
 
 
 
 class Form(FlaskForm):
 	
-	position = FloatField("player_position")
+	position = TextField("player_position")
 
 	games_played = FloatField("games_played")
 	
