@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MACHINE LEARNING</title>
+</head>
+<body>
+
+<h1>Regression Model Predict the Percentage of efficiency of an NBA player</h1>
+
+<p><b>C=0 </br> PF=1 </br> PG=2  </br> SF=3 </br> SG=4 </b></p>
+
+<ol>
+
+<form method="POST",action="{{url_for('form')}}">
+	{{form.csrf_token}}
+
+	<li>{{form.position.label}}
+	{{form.position}}</li>
+
+	<li>{{form.games_played.label}}
+	{{form.games_played}}</li>
+
+	<li>{{form.minutes_per_game.label}}
+	{{form.minutes_per_game}}</li>
+
+	<li>{{form.points_per_game.label}}
+	{{form.points_per_game}}</li>
+	
+	<li>{{form.average_field_goal_made.label}}
+	{{form.average_field_goal_made}}</li>
+	
+	<li>{{form.average_field_goal_attempted.label}}
+	{{form.average_field_goal_attempted}}</li>
+	
+	<li>{{form.field_goal_percentage.label}}
+	{{form.field_goal_percentage}}</li>
+	
+	<li>{{form.average_3_point_field_goal.label}}
+	{{form.average_3_point_field_goal}}</li>
+		
+	<li>{{form.average_3_point_field_goal_attempted.label}}
+	{{form.average_3_point_field_goal_attempted}}</li>
+	
+	<li>{{form.three_point_field_goal_percentage.label}}
+	{{form.three_point_field_goal_percentage}}</li>
+	
+	<li>{{form.average_free_throws_made.label}}
+	{{form.average_free_throws_made}}</li> 
+
+
+	<li>{{form.average_free_throws_attempted.label}}
+	{{form.average_free_throws_attempted}}</li>
+	
+	<li>{{form.free_throw_percentage.label}}
+	{{form.free_throw_percentage}}</li>
+	
+	<li>{{form.rebounds_per_game.label}}
+	{{form.rebounds_per_game}}</li>
+	
+	<li>{{form.assist_per_game.label}}
+	{{form.assist_per_game}}</li>
+	
+	<li>{{form.steals_per_game.label}}
+	{{form.steals_per_game}}</li>
+	
+	<li>{{form.block_per_game.label}}
+	{{form.block_per_game}}</li>
+	
+	<li>{{form.turnover_per_game.label}}
+	{{form.turnover_per_game}}</li>
+	
+	<li>{{form.double_double.label}}
+	{{form.double_double}}</li>
+	
+	<li>{{form.triple_double.label}}
+	{{form.triple_double}}</li>
+
+	<hr>
+	{{form.submit}}
+</form>
+
+</ol>
+
+</body>
+</html>

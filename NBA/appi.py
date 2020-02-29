@@ -31,17 +31,12 @@ def return_predictions(model,scaler,sample_json):
     
     
     player=[[POS, GP, MIN, PTS, FGM, FGA, FG, PM, PA, P, FTM, FTA, FT, REB, AST, STL, BLK, TO, DD2, TD3]]
-    
+    print(player.shape)
     player=scaler.transform(player)
 
     prediction=model.predict(player)
 
     return float(prediction)
-
-
-
-
-
 
 
 app= Flask(__name__)
